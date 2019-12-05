@@ -130,11 +130,20 @@ RUN chmod +x /usr/local/bin/entrypoint.sh
 
 COPY ETC/ms-python.python-2019.11.50794.vsix /home/vscode
 COPY ETC/CoenraadS.bracket-pair-colorizer-2-0.0.29.vsix /home/vscode
+COPY ETC/donjayamanne.python-extension-pack-1.6.0.vsix /home/vscode
+COPY ETC/formulahendry.code-runner-0.9.15.vsix /home/vscode
+COPY ETC/tht13.python-0.2.3.vsix /home/vscode
 
 RUN code-server --install-extension /home/vscode/ms-python.python-2019.11.50794.vsix
 RUN code-server --install-extension /home/vscode/CoenraadS.bracket-pair-colorizer-2-0.0.29.vsix
+RUN code-server --install-extension /home/vscode/donjayamanne.python-extension-pack-1.6.0.vsix
+RUN code-server --install-extension /home/vscode/formulahendry.code-runner-0.9.15.vsix
+RUN code-server --install-extension /home/vscode/tht13.python-0.2.3.vsix
 USER vscode
 RUN code-server --install-extension /home/vscode/ms-python.python-2019.11.50794.vsix
 RUN code-server --install-extension /home/vscode/CoenraadS.bracket-pair-colorizer-2-0.0.29.vsix
+RUN code-server --install-extension /home/vscode/donjayamanne.python-extension-pack-1.6.0.vsix
+RUN code-server --install-extension /home/vscode/formulahendry.code-runner-0.9.15.vsix
+RUN code-server --install-extension /home/vscode/tht13.python-0.2.3.vsix
 USER root
 RUN rm -f /home/vscode/*.vsix

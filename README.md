@@ -1,6 +1,6 @@
 # Developing inside a Container
 
-### The Visual Studio Code Remote - Containers extension lets you use a Docker container as a full-featured development environment.
+The Visual Studio Code Remote - Containers extension lets you use a Docker container as a full-featured development environment
 
 ## Python
 
@@ -102,8 +102,7 @@ docker push mrsono0/devremotecontainers:r-devel3.6.1
 
 - ### OpenJDK8
 
-```
-docker build -f openjdk8.Dockerfile --tag mrsono0/devremotecontainers:openjdk8 .
+```docker build -f openjdk8.Dockerfile --tag mrsono0/devremotecontainers:openjdk8 .
 
 docker run --rm --name openjdk8 -itd mrsono0/devremotecontainers:openjdk8
 
@@ -118,8 +117,7 @@ docker push mrsono0/devremotecontainers:openjdk8
 
 - ### OpenJDK11
 
-```
-docker build -f openjdk11.Dockerfile --tag mrsono0/devremotecontainers:openjdk11 .
+```docker build -f openjdk11.Dockerfile --tag mrsono0/devremotecontainers:openjdk11 .
 
 docker run --rm --name openjdk11 -it mrsono0/devremotecontainers:openjdk11
 
@@ -135,8 +133,7 @@ docker push mrsono0/devremotecontainers:openjdk13
 
 - ### Oracle JDK 8
 
-```
-docker build -f oraclejdk8.Dockerfile --tag mrsono0/devremotecontainers:oraclejdk8 .
+```docker build -f oraclejdk8.Dockerfile --tag mrsono0/devremotecontainers:oraclejdk8 .
 
 docker run --rm --name oraclejdk8 -it mrsono0/devremotecontainers:oraclejdk8
 
@@ -149,8 +146,7 @@ docker push mrsono0/devremotecontainers:oraclejdk8
 
 - ### Oracle JDK 11
 
-```
-docker build -f oraclejdk11.Dockerfile --tag mrsono0/devremotecontainers:oraclejdk11 .
+```docker build -f oraclejdk11.Dockerfile --tag mrsono0/devremotecontainers:oraclejdk11 .
 
 docker run --rm --name oraclejdk11 -it mrsono0/devremotecontainers:oraclejdk11
 
@@ -165,8 +161,7 @@ docker push mrsono0/devremotecontainers:oraclejdk11
 
 - ### node.js 12.13.0
 
-```
-docker build -f nodejs12.13.0.Dockerfile --tag mrsono0/devremotecontainers:nodejs12.13.0 .
+```docker build -f nodejs12.13.0.Dockerfile --tag mrsono0/devremotecontainers:nodejs12.13.0 .
 
 docker run --rm --name nodejs12.13.0 -it mrsono0/devremotecontainers:nodejs12.13.0
 
@@ -181,8 +176,7 @@ docker push mrsono0/devremotecontainers:nodejs12.13.0
 
 - ### ai and Docker-for-AI-Researcher
 
-```
-docker build -f ai.Dockerfile --tag mrsono0/devremotecontainers:ai .
+```docker build -f ai.Dockerfile --tag mrsono0/devremotecontainers:ai .
 
 docker run --rm --name ai -it mrsono0/devremotecontainers:ai
 
@@ -197,8 +191,7 @@ docker push mrsono0/devremotecontainers:ai
 
 - ### vscode server
 
-```
-docker build -f vscode-server.Dockerfile --tag mrsono0/devremotecontainers:vscode-server .
+```docker build -f vscode-server.Dockerfile --tag mrsono0/devremotecontainers:vscode-server .
 
 docker run --rm --name vscode-server -it mrsono0/devremotecontainers:vscode-server
 
@@ -212,8 +205,7 @@ docker push mrsono0/devremotecontainers:vscode-server
 
 ## Developing inside a Container
 
-```
-git clone https://github.com/Microsoft/vscode-remote-try-node
+```git clone https://github.com/Microsoft/vscode-remote-try-node
 git clone https://github.com/Microsoft/vscode-remote-try-python
 git clone https://github.com/Microsoft/vscode-remote-try-go
 git clone https://github.com/Microsoft/vscode-remote-try-java
