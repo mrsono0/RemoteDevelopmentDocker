@@ -6,8 +6,7 @@
 
 - ### Anaconda3 2019.10
 
-```
-docker build -f anaconda3.Dockerfile --tag mrsono0/devremotecontainers:anaconda3 .
+```docker build -f anaconda3.Dockerfile --tag mrsono0/devremotecontainers:anaconda3 .
 
 docker run --rm --name anaconda3 -itd mrsono0/devremotecontainers:anaconda3
 
@@ -24,8 +23,7 @@ docker push mrsono0/devremotecontainers:anaconda3
 
 - ### Miniconda3 4.7.12
 
-```
-docker build -f miniconda3.Dockerfile --tag mrsono0/devremotecontainers:miniconda3 .
+```docker build -f miniconda3.Dockerfile --tag mrsono0/devremotecontainers:miniconda3 .
 
 docker run --rm --name miniconda3 -itd mrsono0/devremotecontainers:miniconda3
 
@@ -40,8 +38,7 @@ docker push mrsono0/devremotecontainers:miniconda3
 
 - ### Python 3.7.5
 
-```
-docker build -f python3.7.5.Dockerfile --tag mrsono0/devremotecontainers:python3.7.5 .
+```docker build -f python3.7.5.Dockerfile --tag mrsono0/devremotecontainers:python3.7.5 .
 
 docker run --rm --name python3.7.5 -itd mrsono0/devremotecontainers:python3.7.5
 
@@ -58,8 +55,7 @@ python3 -m pip install --upgrade pip
 
 - ### Python 3.8
 
-```
-docker build -f python3.8.Dockerfile --tag mrsono0/devremotecontainers:python3.8 .
+```docker build -f python3.8.Dockerfile --tag mrsono0/devremotecontainers:python3.8 .
 
 docker run --rm --name python3.8 -itd mrsono0/devremotecontainers:python3.8
 
@@ -76,8 +72,7 @@ docker push mrsono0/devremotecontainers:python3.8
 
 - ### R 3.6.1
 
-```
-docker build -f r3.6.1.Dockerfile --tag mrsono0/devremotecontainers:r3.6.1 .
+```docker build -f r3.6.1.Dockerfile --tag mrsono0/devremotecontainers:r3.6.1 .
 
 docker run --rm --name r3.6.1 -itd mrsono0/devremotecontainers:r3.6.1
 
@@ -92,8 +87,7 @@ docker push mrsono0/devremotecontainers:r3.6.1
 
 - ### R-devel 3.6.1
 
-```
-docker build -f r-devel3.6.1.Dockerfile --tag mrsono0/devremotecontainers:r-devel3.6.1 .
+```docker build -f r-devel3.6.1.Dockerfile --tag mrsono0/devremotecontainers:r-devel3.6.1 .
 
 docker run --rm --name r-devel3.6.1 -itd mrsono0/devremotecontainers:r-devel3.6.1
 
