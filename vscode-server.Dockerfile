@@ -65,6 +65,24 @@ RUN code-server --install-extension /home/vscode/vscode-icons-team.vscode-icons-
 USER root
 RUN rm -f /home/vscode/*.vsix
 
+# RUN ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime
+# RUN locale-gen --purge
+# RUN locale-gen ko_KR.UTF-8
+# RUN dpkg-reconfigure locales
+# RUN echo 'LANG="ko_KR.UTF-8"' >> /etc/environment && \
+#     # echo 'LANG="ko_KR.EUC-KR"' >> /etc/environment && \
+#     echo 'LANGUAGE="ko_KR;ko;en_GB;en"' >> /etc/environment && \
+#     echo 'LC_ALL="ko_KR.UTF-8"' >> /etc/environment
+# RUN echo 'export LANG="ko_KR.UTF-8"' >> /etc/profile && \
+#     # echo 'export LANG="ko_KR.EUC-KR"' >> /etc/profile && \
+#     echo 'export LANGUAGE="ko_KR;ko;en_GB;en"' >> /etc/profile && \
+#     echo 'export LC_ALL="ko_KR.UTF-8"' >> /etc/profile && \
+#     echo "export QT_XKB_CONFIG_ROOT=/usr/share/X11/locale" >> /etc/profile
+# RUN echo 'LANG="ko_KR.UTF-8"' >> /etc/default/locale && \
+#     # echo 'LANG="ko_KR.EUC-KR"' >> /etc/default/locale && \
+#     echo 'LANGUAGE="ko_KR;ko;en_GB;en"' >> /etc/default/locale && \
+#     echo 'LC_ALL="ko_KR.UTF-8"' >> /etc/default/locale
+
 # ENV PASSWORD "000000"
 EXPOSE 6006-6015 8080 8888
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
