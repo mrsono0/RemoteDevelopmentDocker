@@ -65,7 +65,6 @@ RUN code-server --install-extension /home/vscode/vscode-icons-team.vscode-icons-
 USER root
 RUN rm -f /home/vscode/*.vsix
 
-# RUN ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime
 # RUN locale-gen --purge
 # RUN locale-gen ko_KR.UTF-8
 # RUN dpkg-reconfigure locales

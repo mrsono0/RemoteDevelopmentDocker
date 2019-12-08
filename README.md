@@ -16,7 +16,9 @@ docker run --rm --name anaconda3 -itd -p 8888:8888 mrsono0/devremotecontainers:a
 
 docker run --rm --name anaconda3 -itd -p 8888:8888 -p 8088:8088 -p 6006-6015:6006-6015 mrsono0/devremotecontainers:anaconda3 /bin/bash -c "mkdir -p /home/vscode/notebooks && /opt/conda/bin/jupyter lab --notebook-dir=/home/vscode/notebooks --ip='*' --port=8888 --no-browser --allow-root"
 
-docker run --rm --name anaconda3 -itd -u vscode -p 8888:8888 -p 8088:8088 -p 6006-6015:6006-6015 -e JUPYTER_RUN=yes mrsono0/devremotecontainers:anaconda3
+docker run --rm --name anaconda3 -itd -u vscode -p 8888:8888 -p 8088:8088 -p 6006-6015:6006-6015 -v ~:/home/vscode/prj -e JUPYTER_RUN=yes mrsono0/devremotecontainers:anaconda3
+
+docker run --rm --name anaconda3 -itd -u vscode -p 8888:8888 -p 8088:8088 -p 6006-6015:6006-6015 -v ~:/home/vscode/prj --net=container:ora11xe --link ora11xe -e JUPYTER_RUN=yes mrsono0/devremotecontainers:anaconda3
 
 docker push mrsono0/devremotecontainers:anaconda3
 ```
