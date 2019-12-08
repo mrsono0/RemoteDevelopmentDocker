@@ -14,8 +14,9 @@ RUN wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-4.7.12-Linux-x86
 
 RUN bash -c "/opt/conda/bin/conda install jupyter -y --quiet"
 RUN bash -c "/opt/conda/bin/conda install jupyterlab -y --quiet"
+RUN bash -c "/opt/conda/bin/conda install pylint -y --quiet"
 RUN if [ ! -d "/usr/local/miniconda3" ]; then ln -s /opt/conda /usr/local/miniconda3; fi
-RUN pip --disable-pip-version-check --no-cache-dir install pylint
+# RUN pip --disable-pip-version-check --no-cache-dir install pylint
 # Clean up
 RUN apt-get autoremove -y \
     && apt-get clean -y \

@@ -119,7 +119,7 @@ RUN set -ex; \
 
 RUN bash -c "pip install --no-input jupyter"
 RUN bash -c "pip install --no-input jupyterlab"
-RUN pip --disable-pip-version-check --no-cache-dir install pylint
+RUN bash -c "pip install --no-input pylint"
 # Clean up
 RUN apt-get autoremove -y \
     && apt-get clean -y \

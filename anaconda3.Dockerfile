@@ -12,8 +12,9 @@ RUN wget --quiet https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_6
 
 RUN bash -c "/opt/conda/bin/conda install jupyter -y --quiet"
 RUN bash -c "/opt/conda/bin/conda install jupyterlab -y --quiet"
+RUN bash -c "/opt/conda/bin/conda install pylint -y --quiet"
 RUN if [ ! -d "/usr/local/anaconda3" ]; then ln -s /opt/conda /usr/local/anaconda3; fi
-RUN pip --disable-pip-version-check --no-cache-dir install pylint
+# RUN pip --disable-pip-version-check --no-cache-dir install pylint
 # Clean up
 RUN apt-get autoremove -y \
     && apt-get clean -y \
